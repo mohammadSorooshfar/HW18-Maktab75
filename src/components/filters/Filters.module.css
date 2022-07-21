@@ -1,0 +1,36 @@
+.bigSale {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #f89fa7;
+  box-shadow: 1px 1px 5px #ccc;
+  border-radius: 20px;
+  margin-top: 10%;
+}
+.bigSale img {
+  width: 180px;
+}
+.bigSaleText {
+  color: white;
+  width: 40%;
+  text-align: left;
+}
+.buttonDiv {
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-between;
+}
+.buttonGray {
+  background-color: #e7e8ec;
+  color: #afb7c3;
+}
+.buttonPink {
+  background-color: #f8a1aa;
+  color: white;
+}
+.button {
+  border: none;
+  border-radius: 20px;
+  padding: 2% 4%;
+  box-shadow: 1px 1px 5px #ccc;
+}

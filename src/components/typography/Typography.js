@@ -1,6 +1,10 @@
 import React from "react";
 
 export default function Typography(props) {
+  let align = "center";
+  if (props.left) {
+    align = "left";
+  }
   return (
     <div
       style={{
@@ -15,6 +19,7 @@ export default function Typography(props) {
           fontSize: props.topSize,
           fontWeight: props.boldTop ? "bold" : "normal",
           margin: 0,
+          textAlign: align,
         }}
       >
         {props.top}
@@ -25,6 +30,7 @@ export default function Typography(props) {
           fontSize: props.bottomSize,
           fontWeight: props.boldBottom ? "bold" : "normal",
           margin: 0,
+          textAlign: align,
         }}
       >
         {props.bottom}

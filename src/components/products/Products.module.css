@@ -1,0 +1,8 @@
+.productsDiv {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding-bottom: 20%;
+}

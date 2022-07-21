@@ -1,0 +1,19 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+  margin-top: 10%;
+}
+.main img {
+  border-radius: 20px;
+  box-shadow: 1px 1px 3px #ccc;
+  height: 220px;
+  width: 100%;
+}
+.productDetail {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5%;
+  align-items: center;
+  padding: 0 4%;
+}
