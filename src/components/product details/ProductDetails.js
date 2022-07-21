@@ -4,26 +4,40 @@ import Typography from "../typography/Typography";
 export default function ProductDetails(props) {
   return (
     <div className={cssClasses.main}>
-      <img src={props.image} alt="productImage" />
-      <div>
-        <Typography
-          top={props.product.name}
-          bottom={props.product.detail}
-          topColor="black"
-          bottomColor="#C8CED8"
-          topSize="18px"
-          bottomSize="14px"
-          boldTop
-        />
-        <Typography
-          top="Hafia Zaskin"
-          bottom="Jakarta, INA"
-          topColor="gray"
-          bottomColor="#737C8E"
-          topSize="14px"
-          bottomSize="18px"
-          boldBottom
-        />
+      <img src={props.product.image} alt="productImage" />
+      <div className={cssClasses.details}>
+        <div className={cssClasses.priceNameDiv}>
+          <Typography
+            top={props.product.name}
+            bottom={props.product.detail}
+            topColor="black"
+            bottomColor="gray"
+            topSize="18px"
+            bottomSize="14px"
+            boldTop
+            left
+          />
+          <Typography
+            top={props.product.price}
+            bottom=""
+            topColor="black"
+            bottomColor=""
+            topSize="18px"
+            bottomSize=""
+            boldTop
+          />
+        </div>
+        <div className={cssClasses.detailsDiv}>
+          <Typography
+            top="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            bottom=""
+            topColor="gray"
+            bottomColor=""
+            topSize="14px"
+            bottomSize=""
+            left
+          />
+        </div>
       </div>
     </div>
   );

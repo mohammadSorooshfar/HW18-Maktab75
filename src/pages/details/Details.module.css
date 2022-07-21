@@ -1,3 +1,5 @@
 .main {
   width: 100%;
+  background-color: #fdfdfe;
+  min-height: 100vh;
 }
