@@ -9,18 +9,30 @@ import {
   BsHouseDoor,
 } from "react-icons/bs";
 import Icon from "../icon/Icon";
-export default function Footer() {
+export default function Footer(props) {
   return (
     <nav className={cssClasses.navbar}>
-      <Icon bg="white" color="#A7B0BE" noShadow>
-        <BsHouseDoor />
-      </Icon>
+      {props.showHome ? (
+        <Icon bg="#F4FBFB" color="#F8A3AC" noShadow>
+          <BsHouseDoorFill />
+        </Icon>
+      ) : (
+        <Icon bg="white" color="#A7B0BE" noShadow>
+          <BsHouseDoor onClick={() => props.setShowHome(true)} />
+        </Icon>
+      )}
       <Icon bg="white" color="#A7B0BE" noShadow>
         <BsCardText />
       </Icon>
-      <Icon bg="white" color="#A7B0BE" noShadow>
-        <BsCart />
-      </Icon>
+      {!props.showHome ? (
+        <Icon bg="#F4FBFB" color="#F8A3AC" noShadow>
+          <BsCartFill />
+        </Icon>
+      ) : (
+        <Icon bg="white" color="#A7B0BE" noShadow>
+          <BsCart onClick={() => props.handleBasketClick()} />
+        </Icon>
+      )}
       <Icon bg="white" color="#A7B0BE" noShadow>
         <BsPerson />
       </Icon>

@@ -5,28 +5,36 @@
             "name":"Casual V-neck",
             "detail":"Dagadu jacket",
             "price":"$129.00",
-            "image":"https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8dCUyMHNoaXJ0fGVufDB8fDB8fA%3D%3D&w=1000&q=80"
+            "image":"https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8dCUyMHNoaXJ0fGVufDB8fDB8fA%3D%3D&w=1000&q=80",
+            "count":0,
+            "inventory":5
         },
         {
             "id":2,
             "name":"Casual T-Shirt",
             "detail":"Dagadu jacket",
             "price":"$110.00",
-            "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvuaoqn64eAiZ7dTE-h6W3-QdxgX-b_HZZNA&usqp=CAU"
-        },
+            "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvuaoqn64eAiZ7dTE-h6W3-QdxgX-b_HZZNA&usqp=CAU",
+            "count":0,
+            "inventory":5
+     },
         {
             "id":3,
             "name":"Casual V-neck",
             "detail":"Dagadu jacket",
             "price":"$150.00",
-            "image":"https://images.unsplash.com/photo-1600328759671-85927887458d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fHBsYWluJTIwdCUyMHNoaXJ0fGVufDB8fDB8fA%3D%3D&w=1000&q=80"
+            "image":"https://images.unsplash.com/photo-1600328759671-85927887458d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fHBsYWluJTIwdCUyMHNoaXJ0fGVufDB8fDB8fA%3D%3D&w=1000&q=80",
+            "count":0,
+            "inventory":5
         },
         {
             "id":4,
             "name":"Casual T-Shirt",
             "detail":"Dagadu jacket",
             "price":"$200.00",
-            "image":"https://www.kabooki.com/admin/public/getimage.ashx?Crop=0&Image=/Files/Images/ImageBank/Image%20pictures/KB_SS22_image/K_14334.jpg&Format=jpg&Width=1278&Quality=75"
-        }
+            "image":"https://www.kabooki.com/admin/public/getimage.ashx?Crop=0&Image=/Files/Images/ImageBank/Image%20pictures/KB_SS22_image/K_14334.jpg&Format=jpg&Width=1278&Quality=75",
+            "count":0,
+            "inventory":5
+         }
     ]
 }

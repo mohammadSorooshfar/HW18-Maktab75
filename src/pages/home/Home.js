@@ -8,14 +8,18 @@ import Products from "../../components/products/Products";
 export default function Home(props) {
   return (
     <div className={cssClasses.container}>
-      <Header />
+      <Header topText="Hafia Zaskin" bottomText="Jakarta, INA" />
       <SearchBar />
       <Filters />
       <Products
         products={props.products}
         handleProductClick={props.handleProductClick}
       />
-      <Footer />
+      <Footer
+        showHome={props.showHome}
+        setShowHome={props.setShowHome}
+        handleBasketClick={props.handleBasketClick}
+      />
     </div>
   );
 }

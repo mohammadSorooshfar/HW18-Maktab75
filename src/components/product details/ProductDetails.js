@@ -1,10 +1,16 @@
 import React from "react";
 import cssClasses from "./ProductDetails.module.css";
 import Typography from "../typography/Typography";
+import Icon from "../icon/Icon";
+import { BsCartFill } from "react-icons/bs";
 export default function ProductDetails(props) {
   return (
     <div className={cssClasses.main}>
-      <img src={props.product.image} alt="productImage" />
+      <img
+        src={props.product.image}
+        alt="productImage"
+        className={cssClasses.image}
+      />
       <div className={cssClasses.details}>
         <div className={cssClasses.priceNameDiv}>
           <Typography
@@ -31,12 +37,20 @@ export default function ProductDetails(props) {
           <Typography
             top="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
             bottom=""
-            topColor="gray"
+            topColor="black"
             bottomColor=""
             topSize="14px"
             bottomSize=""
             left
           />
+        </div>
+        <div className={cssClasses.buttonsDiv}>
+          <button onClick={() => props.addToStorage(props.product)}>
+            Buy now
+          </button>
+          <Icon bg="white" color="#F5A1A9">
+            <BsCartFill onClick={() => props.handleBasketClick()} />
+          </Icon>
         </div>
       </div>
     </div>

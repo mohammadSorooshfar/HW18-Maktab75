@@ -1,0 +1,37 @@
+.main {
+  margin-top: 7%;
+  display: flex;
+  width: 100%;
+  padding: 1%;
+  border-radius: 20px;
+  box-shadow: 1px 1px 5px #ccc;
+}
+
+.productDetails {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+}
+.nameAndPrice {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 5% 4%;
+}
+.icons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 5% 2%;
+}
+.productImage {
+  width: 25%;
+  height: 120px;
+  border-radius: 20px;
+}
+.add {
+  display: flex;
+  align-items: center;
+}

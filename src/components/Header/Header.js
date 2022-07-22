@@ -11,10 +11,10 @@ export default function Header(props) {
         <BsGridFill />
       </Icon>
       <Typography
-        top="Hafia Zaskin"
-        bottom="Jakarta, INA"
+        top={props.topText}
+        bottom={props.bottomText}
         topColor="gray"
-        bottomColor="#737C8E"
+        bottomColor="#283F64"
         topSize="14px"
         bottomSize="18px"
         boldBottom
