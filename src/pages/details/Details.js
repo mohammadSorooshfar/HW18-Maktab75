@@ -7,6 +7,7 @@ export default function Details(props) {
         product={props.product}
         addToStorage={props.addToStorage}
         handleBasketClick={props.handleBasketClick}
+        handleHomeClick={props.handleHomeClick}
       />
     </main>
   );

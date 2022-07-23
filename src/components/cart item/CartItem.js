@@ -25,7 +25,7 @@ export default function CartItem(props) {
             left
           />
           <Typography
-            top={props.product.price}
+            top={"$" + props.product.price.toFixed(2)}
             bottom=""
             topColor="black"
             bottomColor=""
@@ -41,7 +41,7 @@ export default function CartItem(props) {
           </Icon>
           <div className={cssClasses.add}>
             <Icon bg="white" color="black" noShadow small>
-              <FaPlus />
+              <FaPlus onClick={() => props.addToStorage(props.product)} />
             </Icon>
             <Typography
               top={props.product.count}

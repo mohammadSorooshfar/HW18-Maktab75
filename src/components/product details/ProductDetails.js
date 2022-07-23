@@ -2,10 +2,18 @@ import React from "react";
 import cssClasses from "./ProductDetails.module.css";
 import Typography from "../typography/Typography";
 import Icon from "../icon/Icon";
-import { BsCartFill } from "react-icons/bs";
+import { BsCartFill, BsHeartFill, BsHouseDoorFill } from "react-icons/bs";
 export default function ProductDetails(props) {
   return (
     <div className={cssClasses.main}>
+      <div className={cssClasses.icons}>
+        <Icon bg="white" color="#F5A1A9" noShadow>
+          <BsHouseDoorFill onClick={() => props.handleHomeClick()} />
+        </Icon>
+        <Icon bg="white" color="#F5A1A9" noShadow>
+          <BsHeartFill />
+        </Icon>
+      </div>
       <img
         src={props.product.image}
         alt="productImage"

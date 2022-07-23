@@ -17,7 +17,7 @@ export default function Home(props) {
       />
       <Footer
         showHome={props.showHome}
-        setShowHome={props.setShowHome}
+        handleHomeClick={props.handleHomeClick}
         handleBasketClick={props.handleBasketClick}
       />
     </div>

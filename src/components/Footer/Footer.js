@@ -18,7 +18,7 @@ export default function Footer(props) {
         </Icon>
       ) : (
         <Icon bg="white" color="#A7B0BE" noShadow>
-          <BsHouseDoor onClick={() => props.setShowHome(true)} />
+          <BsHouseDoor onClick={() => props.handleHomeClick()} />
         </Icon>
       )}
       <Icon bg="white" color="#A7B0BE" noShadow>
