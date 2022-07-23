@@ -43,7 +43,6 @@ function App() {
   const handleBasketClick = () => {
     setShowHome(false);
     setShowDetails(false);
-    console.log(JSON.parse(localStorage.getItem("cart")));
     setCartProducts(getCartFromStorage());
   };
   const handleHomeClick = () => {
@@ -54,6 +53,25 @@ function App() {
     localStorage.setItem("cart", JSON.stringify([]));
     setCartProducts([]);
     setPrice(0);
+  };
+  const handleMinus = (id) => {
+    const products = cartProducts;
+    const index = products.findIndex((product) => product.id === id);
+    products[index].count--;
+    setPrice(price - products[index].price);
+    if (products[index].count === 0) {
+      products.splice(index, 1);
+    }
+    setCartProducts(products);
+    localStorage.setItem("cart", JSON.stringify(products));
+  };
+  const handleCheck = (id) => {
+    const products = cartProducts;
+    const index = products.findIndex((product) => product.id === id);
+    setPrice(price - products[index].price * products[index].count);
+    products.splice(index, 1);
+    setCartProducts(products);
+    localStorage.setItem("cart", JSON.stringify(products));
   };
   return (
     <div className="App">
@@ -82,6 +100,8 @@ function App() {
           handleBasketClick={handleBasketClick}
           handlePay={handlePay}
           price={price}
+          handleMinus={handleMinus}
+          handleCheck={handleCheck}
         />
       )}
     </div>

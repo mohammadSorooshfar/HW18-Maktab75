@@ -15,6 +15,8 @@ export default function Cart(props) {
             product={product}
             addToStorage={props.addToStorage}
             key={product.id}
+            handleMinus={props.handleMinus}
+            handleCheck={props.handleCheck}
           />
         ))}
       </div>

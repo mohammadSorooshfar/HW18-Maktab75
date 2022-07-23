@@ -37,7 +37,9 @@ export default function CartItem(props) {
         </div>
         <div className={cssClasses.icons}>
           <Icon bg="white" color="#F89FA8" noShadow>
-            <BsFillCheckSquareFill />
+            <BsFillCheckSquareFill
+              onClick={() => props.handleCheck(props.product.id)}
+            />
           </Icon>
           <div className={cssClasses.add}>
             <Icon bg="white" color="black" noShadow small>
@@ -53,7 +55,7 @@ export default function CartItem(props) {
               boldTop
             />
             <Icon bg="white" color="black" noShadow small>
-              <FaMinus />
+              <FaMinus onClick={() => props.handleMinus(props.product.id)} />
             </Icon>
           </div>
         </div>
