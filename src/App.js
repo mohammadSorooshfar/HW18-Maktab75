@@ -36,6 +36,7 @@ function App() {
     }
     localStorage.setItem("cart", JSON.stringify(cartItems));
     setCartProducts(getCartFromStorage());
+    setProduct(product);
   };
   const getCartFromStorage = () => {
     return JSON.parse(localStorage.getItem("cart"));

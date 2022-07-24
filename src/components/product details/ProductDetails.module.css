@@ -26,15 +26,15 @@
 .buttonsDiv {
   display: flex;
   justify-content: space-around;
-  align-items: center;
-  margin-top: 2%;
+  align-items: top;
+  margin-top: 5%;
 }
 .buttonsDiv button {
   border: none;
   background-color: #f8a0a9;
   border-radius: 25px;
   color: white;
-  padding: 5% 20%;
+  padding: 8%;
   box-shadow: 1px 1px 10px #ccc;
 }
 .icons {
@@ -44,4 +44,9 @@
   position: absolute;
   top: 5%;
   left: 10%;
+}
+.buttonWarning {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
 }

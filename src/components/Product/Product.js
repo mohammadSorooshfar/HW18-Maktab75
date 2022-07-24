@@ -13,7 +13,7 @@ export default function Product(props) {
       <div className={cssClasses.productDetail}>
         <Typography
           top={props.product.name}
-          bottom={props.product.price}
+          bottom={"$" + props.product.price.toFixed(2)}
           topColor="#2C4266"
           bottomColor="#A7AFBF"
           topSize="14px"
