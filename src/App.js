@@ -28,15 +28,16 @@ function App() {
       if (cartItems[index].inventory > cartItems[index].count) {
         cartItems[index].count++;
         setPrice(price + cartItems[index].price);
+        setProduct(cartItems[index]);
       }
     } else {
       product.count = 1;
       cartItems.push(product);
       setPrice(price + product.price);
+      setProduct(product);
     }
     localStorage.setItem("cart", JSON.stringify(cartItems));
     setCartProducts(getCartFromStorage());
-    setProduct(product);
   };
   const getCartFromStorage = () => {
     return JSON.parse(localStorage.getItem("cart"));
