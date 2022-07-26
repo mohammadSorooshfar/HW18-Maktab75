@@ -17,6 +17,7 @@ export default function Cart(props) {
             key={product.id}
             handleMinus={props.handleMinus}
             handleCheck={props.handleCheck}
+            handleProductClick={props.handleProductClick}
           />
         ))}
       </div>

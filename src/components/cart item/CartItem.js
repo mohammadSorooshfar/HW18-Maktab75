@@ -11,6 +11,7 @@ export default function CartItem(props) {
         src={props.product.image}
         alt="productImage"
         className={cssClasses.productImage}
+        onClick={() => props.handleProductClick(props.product.id)}
       />
       <div className={cssClasses.productDetails}>
         <div className={cssClasses.nameAndPrice}>

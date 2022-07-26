@@ -8,10 +8,9 @@ import {
   BsHouseDoorFill,
   BsHeart,
 } from "react-icons/bs";
-import { useState } from "react";
 export default function ProductDetails(props) {
   let maximumAmount;
-  console.log(props.product.inventory, props.product.count);
+  console.log(props.product);
   if (props.product.inventory === props.product.count) {
     maximumAmount = "Sorry, no more in the store";
   } else {

@@ -27,12 +27,14 @@ function App() {
   const addToStorage = (product) => {
     const cartItems = getCartFromStorage();
     const index = cartItems.findIndex((item) => item.id === product.id);
-
     if (index !== -1) {
       if (cartItems[index].inventory > cartItems[index].count) {
         cartItems[index].count++;
         setPrice(price + cartItems[index].price);
         setProduct(cartItems[index]);
+        products[products.findIndex((elem) => elem.id == product.id)] =
+          cartItems[index];
+        setProducts(products);
       }
     } else {
       product.count = 1;
@@ -61,15 +63,18 @@ function App() {
     setPrice(0);
   };
   const handleMinus = (id) => {
-    const products = cartProducts;
-    const index = products.findIndex((product) => product.id === id);
-    products[index].count--;
-    setPrice(price - products[index].price);
-    if (products[index].count === 0) {
-      products.splice(index, 1);
+    const cartProductsList = cartProducts;
+    const index = cartProductsList.findIndex((product) => product.id === id);
+    cartProductsList[index].count--;
+    setPrice(price - cartProductsList[index].price);
+    if (cartProductsList[index].count === 0) {
+      cartProductsList.splice(index, 1);
     }
-    setCartProducts(products);
-    localStorage.setItem("cart", JSON.stringify(products));
+    products[products.findIndex((elem) => elem.id == id)] =
+      cartProductsList[index];
+    setProducts(products);
+    setCartProducts(cartProductsList);
+    localStorage.setItem("cart", JSON.stringify(cartProductsList));
   };
   const handleCheck = (id) => {
     const products = cartProducts;
