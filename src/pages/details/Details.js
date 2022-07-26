@@ -8,6 +8,9 @@ export default function Details(props) {
         addToStorage={props.addToStorage}
         handleBasketClick={props.handleBasketClick}
         handleHomeClick={props.handleHomeClick}
+        handleFavorite={props.handleFavorite}
+        favoritesList={props.favoritesList}
+        handleNotFavorite={props.handleNotFavorite}
       />
     </main>
   );

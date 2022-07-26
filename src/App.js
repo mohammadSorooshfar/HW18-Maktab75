@@ -11,14 +11,18 @@ function App() {
   const [showHome, setShowHome] = useState(true);
   const [cartProducts, setCartProducts] = useState([]);
   const [price, setPrice] = useState(0);
+  const [favoritesList, setFavoritesList] = useState([]);
   useEffect(() => {
     setProducts(data.products);
+    setFavoritesList([]);
     localStorage.setItem("products", JSON.stringify(data.products));
     localStorage.setItem("cart", JSON.stringify([]));
+    localStorage.setItem("favorite", JSON.stringify([]));
   }, []);
   const handleProductClick = (id) => {
     setShowDetails(true);
     setProduct(products.find((elem) => elem.id === id));
+    setFavoritesList(JSON.parse(localStorage.getItem("favorite")));
   };
   const addToStorage = (product) => {
     const cartItems = getCartFromStorage();
@@ -75,6 +79,21 @@ function App() {
     setCartProducts(products);
     localStorage.setItem("cart", JSON.stringify(products));
   };
+  const handleFavorite = (id) => {
+    const favorites = JSON.parse(localStorage.getItem("favorite"));
+    favorites.push(id);
+    localStorage.setItem("favorite", JSON.stringify(favorites));
+    setFavoritesList(favorites);
+  };
+  const handleNotFavorite = (id) => {
+    const favorites = JSON.parse(localStorage.getItem("favorite"));
+    favorites.splice(
+      favorites.findIndex((pid) => pid == id),
+      1
+    );
+    localStorage.setItem("favorite", JSON.stringify(favorites));
+    setFavoritesList(favorites);
+  };
   return (
     <div className="App">
       {showDetails ? (
@@ -83,6 +102,9 @@ function App() {
           addToStorage={addToStorage}
           handleBasketClick={handleBasketClick}
           handleHomeClick={handleHomeClick}
+          handleFavorite={handleFavorite}
+          favoritesList={favoritesList}
+          handleNotFavorite={handleNotFavorite}
         />
       ) : showHome ? (
         <Home
@@ -91,6 +113,9 @@ function App() {
           showHome={showHome}
           handleHomeClick={handleHomeClick}
           handleBasketClick={handleBasketClick}
+          handleFavorite={handleFavorite}
+          favoritesList={favoritesList}
+          handleNotFavorite={handleNotFavorite}
         />
       ) : (
         <Cart

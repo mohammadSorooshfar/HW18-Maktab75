@@ -14,6 +14,9 @@ export default function Home(props) {
       <Products
         products={props.products}
         handleProductClick={props.handleProductClick}
+        handleFavorite={props.handleFavorite}
+        favoritesList={props.favoritesList}
+        handleNotFavorite={props.handleNotFavorite}
       />
       <Footer
         showHome={props.showHome}

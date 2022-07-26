@@ -2,14 +2,15 @@ import React from "react";
 import cssClasses from "./Product.module.css";
 import Typography from "../typography/Typography";
 import Icon from "../icon/Icon";
-import { BsHeart } from "react-icons/bs";
+import { BsHeart, BsHeartFill } from "react-icons/bs";
 export default function Product(props) {
   return (
-    <div
-      className={cssClasses.main}
-      onClick={() => props.handleProductClick(props.product.id)}
-    >
-      <img src={props.product.image} alt="productImage" />
+    <div className={cssClasses.main}>
+      <img
+        src={props.product.image}
+        alt="productImage"
+        onClick={() => props.handleProductClick(props.product.id)}
+      />
       <div className={cssClasses.productDetail}>
         <Typography
           top={props.product.name}
@@ -22,7 +23,13 @@ export default function Product(props) {
           left
         />
         <Icon bg="#FC7F71" color="white" small>
-          <BsHeart />
+          {props.favoritesList.find((id) => id == props.product.id) ? (
+            <BsHeartFill
+              onClick={() => props.handleNotFavorite(props.product.id)}
+            />
+          ) : (
+            <BsHeart onClick={() => props.handleFavorite(props.product.id)} />
+          )}
         </Icon>
       </div>
     </div>

@@ -2,7 +2,12 @@ import React from "react";
 import cssClasses from "./ProductDetails.module.css";
 import Typography from "../typography/Typography";
 import Icon from "../icon/Icon";
-import { BsCartFill, BsHeartFill, BsHouseDoorFill } from "react-icons/bs";
+import {
+  BsCartFill,
+  BsHeartFill,
+  BsHouseDoorFill,
+  BsHeart,
+} from "react-icons/bs";
 import { useState } from "react";
 export default function ProductDetails(props) {
   let maximumAmount;
@@ -19,7 +24,13 @@ export default function ProductDetails(props) {
           <BsHouseDoorFill onClick={() => props.handleHomeClick()} />
         </Icon>
         <Icon bg="white" color="#F5A1A9" noShadow>
-          <BsHeartFill />
+          {props.favoritesList.find((id) => id == props.product.id) ? (
+            <BsHeartFill
+              onClick={() => props.handleNotFavorite(props.product.id)}
+            />
+          ) : (
+            <BsHeart onClick={() => props.handleFavorite(props.product.id)} />
+          )}
         </Icon>
       </div>
       <img

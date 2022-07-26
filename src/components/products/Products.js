@@ -9,6 +9,9 @@ export default function Products(props) {
           product={product}
           key={product.id}
           handleProductClick={props.handleProductClick}
+          handleFavorite={props.handleFavorite}
+          favoritesList={props.favoritesList}
+          handleNotFavorite={props.handleNotFavorite}
         />
       ))}
     </main>
