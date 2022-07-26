@@ -35,6 +35,42 @@
             "image":"https://www.kabooki.com/admin/public/getimage.ashx?Crop=0&Image=/Files/Images/ImageBank/Image%20pictures/KB_SS22_image/K_14334.jpg&Format=jpg&Width=1278&Quality=75",
             "count":0,
             "inventory":5
-         }
+         },
+         {
+             "id":5,
+             "name":"Casual T-Shirt",
+             "detail":"Dagadu jacket",
+             "price":350.00,
+             "image":"https://cdn.shopify.com/s/files/1/2794/4596/products/Queen-of-Receipts-T-Shirt-Be-Bougie-1622061364_1024x1024@2x.jpg?v=1622061366",
+             "count":0,
+             "inventory":5
+          },
+          {
+              "id":6,
+              "name":"Casual T-Shirt",
+              "detail":"Dagadu jacket",
+              "price":110.00,
+              "image":"https://ombre.com/eng_pl_Mens-plain-t-shirt-S1370-coral-18530_4.jpg",
+              "count":0,
+              "inventory":5
+           },
+           {
+               "id":7,
+               "name":"Casual T-Shirt",
+               "detail":"Dagadu jacket",
+               "price":235.00,
+               "image":"https://st.mngbcn.com/rcs/pics/static/T5/fotos/S20/57025936_99_D9.jpg?ts=1570800926014&imwidth=412&imdensity=2",
+               "count":0,
+               "inventory":5
+            },
+            {
+                "id":8,
+                "name":"Casual T-Shirt",
+                "detail":"Dagadu jacket",
+                "price":265.00,
+                "image":"https://images.unsplash.com/photo-1484517586036-ed3db9e3749e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fHQlMjBzaGlydCUyMG1vZGVsfGVufDB8fDB8fA%3D%3D&w=1000&q=80",
+                "count":0,
+                "inventory":5
+             }
     ]
 }
